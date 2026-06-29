@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aquatic Products Series</title>
+    <style>
+      :root {
+        --paper: #f5eee2;
+        --card: #fffdf8;
+        --ink: #3d342d;
+        --line: rgba(84, 66, 46, 0.12);
+        --shadow: rgba(102, 78, 47, 0.14);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background:
+          radial-gradient(circle at 16% 12%, rgba(255, 255, 255, 0.9), transparent 24%),
+          radial-gradient(circle at 84% 82%, rgba(213, 240, 255, 0.35), transparent 28%),
+          linear-gradient(180deg, #f4ede1 0%, #ece4d7 100%);
+        color: var(--ink);
+        font-family: "Times New Roman", Georgia, serif;
+      }
+
+      body {
+        padding: 28px;
+      }
+
+      .header {
+        margin: 0 auto 20px;
+        max-width: 1600px;
+      }
+
+      .title {
+        margin: 0 0 6px;
+        font-size: 28px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+      }
+
+      .subtitle {
+        margin: 0;
+        font-size: 14px;
+        color: rgba(61, 52, 45, 0.66);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+        align-items: start;
+        max-width: 1600px;
+        margin: 0 auto;
+      }
+
+      .card {
+        background: rgba(255, 253, 248, 0.64);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        box-shadow: 0 20px 40px var(--shadow);
+        backdrop-filter: blur(8px);
+        overflow: hidden;
+      }
+
+      .meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
+        padding: 16px 18px 12px;
+      }
+
+      .name {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .path {
+        margin: 0;
+        font-size: 12px;
+        color: rgba(61, 52, 45, 0.58);
+      }
+
+      .frame-wrap {
+        padding: 0 12px 12px;
+      }
+
+      iframe {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        border: 0;
+        border-radius: 18px;
+        background: var(--card);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+      }
+
+      @media (max-width: 1180px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">Aquatic Products Series</h1>
+      <p class="subtitle">Octopus / Fish / Shrimp</p>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <div class="meta">
+          <h2 class="name">Octopus</h2>
+          <p class="path">octopus</p>
+        </div>
+        <div class="frame-wrap">
+          <iframe src="./octopus/index.html" title="Octopus poster"></iframe>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="meta">
+          <h2 class="name">Fish</h2>
+          <p class="path">fish</p>
+        </div>
+        <div class="frame-wrap">
+          <iframe src="./fish/index.html" title="Fish poster"></iframe>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="meta">
+          <h2 class="name">Shrimp</h2>
+          <p class="path">shrimp</p>
+        </div>
+        <div class="frame-wrap">
+          <iframe src="./shrimp/index.html" title="Shrimp poster"></iframe>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

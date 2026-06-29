@@ -1,0 +1,43 @@
+:root {
+  --paper: #fffdf8;
+  --frame: #f1eadf;
+  --shadow: rgba(110, 89, 63, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at 20% 12%, rgba(255, 255, 255, 0.95), transparent 22%),
+    radial-gradient(circle at 80% 85%, rgba(253, 221, 235, 0.58), transparent 28%),
+    linear-gradient(180deg, #f4ede1 0%, #ece4d7 100%);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  font-family: "Times New Roman", Georgia, serif;
+}
+
+.page {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+#poster {
+  width: min(900px, calc(100vw - 40px));
+  height: auto;
+  aspect-ratio: 1 / 1;
+  background: var(--paper);
+  border-radius: 28px;
+  box-shadow:
+    0 26px 64px var(--shadow),
+    0 0 0 1px rgba(255, 255, 255, 0.7) inset;
+}
