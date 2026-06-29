@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pumpkin · recolor</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #ffffff;
+            font-family: sans-serif;
+        }
+        #canvas-container {
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .controls {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        input[type=range] {
+            width: 300px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+    <div id="canvas-container">
+        <div class="controls">
+            <span id="time-display">00:00</span>
+            <input type="range" id="time-slider" min="0" max="23.99" value="0" step="0.01">
+            <button id="play-btn">Play</button>
+            <a href="gallery.html" style="text-decoration: none; color: #666; font-size: 14px; margin-left: 10px;">返回合集</a>
+        </div>
+    </div>
+    <script src="sketchPumpkin.js"></script>
+</body>
+</html>

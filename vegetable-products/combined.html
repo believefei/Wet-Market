@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>番茄 · 南瓜 · 洋葱 三联</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #ffffff;
+            font-family: sans-serif;
+        }
+        #canvas-container {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            width: 96vw;          /* 3:1 长方形，自动缩放适配视口 */
+            max-width: 2100px;
+        }
+        /* 让 p5 画布按容器宽度等比缩放 */
+        #canvas-container canvas {
+            display: block;
+            width: 100% !important;
+            height: auto !important;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    <script src="sketchCombined.js"></script>
+</body>
+</html>
